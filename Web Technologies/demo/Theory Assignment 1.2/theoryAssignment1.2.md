@@ -215,7 +215,7 @@ eg:
 </form>
 ```
 ## 7. Write an HTML code to display the following. [2071]
-```html
+```css
 <!--styling within head-->
 <style>
 table,td {
@@ -227,7 +227,8 @@ table,td {
     width:200px;
 }
 </style>
-
+```
+```html
 <!--styling within body-->
 <table >
     <tr><td><b><u>Example</u></b></td></tr>
@@ -237,7 +238,10 @@ table,td {
 ```
 
 Output:
+<html>
 <!--styling within head-->
+
+<head>
 <style>
 table,td {
 padding:10px;
@@ -248,10 +252,13 @@ text-align:center;
 width:200px;
 }
 </style>
-
+</head>
+<body>
 <!--HTML codes within body-->
 <table >
 <tr><td><b><u>Example</u></b></td></tr>
 <tr><td>(a+b)<sup>2</sup> = a<sup>2</sup>+2ab+b<sup>2</sup></td></tr>
 <tr><td>Thank You</td></tr>
 </table>
+</body>
+</html>
