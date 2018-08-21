@@ -228,15 +228,15 @@ table,td {
 }
 </style>
 
-<!--styling within head-->
+<!--styling within body-->
 <table >
     <tr><td><b><u>Example</u></b></td></tr>
     <tr><td>(a+b)<sup>2</sup> = a<sup>2</sup>+2ab+b<sup>2</sup></td></tr>
     <tr><td>Thank You</td></tr>
 </table>
+```
 
-
-```html
+Output:
 <!--styling within head-->
 <style>
 table,td {
