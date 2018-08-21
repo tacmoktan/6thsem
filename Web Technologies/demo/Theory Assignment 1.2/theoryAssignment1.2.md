@@ -5,7 +5,7 @@ Attributes:
 2. target(values: _blank,_parent,_self,_top,framename)
 
 e.g.
-```
+```html
 <a href="www.fb.com" target="_blank"> </a>
 ```
 
@@ -17,7 +17,7 @@ Attributes:
 4. width
     
 e.g.
-```
+```html
 <img src="cat.jpg" alt="cat" width="250px" height="250px">
 ```
 
@@ -30,7 +30,7 @@ Specifies where to send the form data after being submitted.
 Specifies how to send the form data(either with GET or POST HTTP request).  
 
 e.g.   
-```
+```html
 <form action="backend/something.php" method="GET">
 ```
 ## 2. What are the attributes of list tag? Explain. [2068]
@@ -39,7 +39,7 @@ The attributes for list tag are:
 1. **type**  
 Specifies which kind of bullet point will be used. Not supported in HTML5.  
 e.g.  
-```
+```html
 <ol> 
     <li>Shakti</li> 
     <li type="a">Maan</li> 
@@ -54,7 +54,7 @@ Output:
 2. **value**  
 Specifies the value of a list item. The following list items will increment from that number( only for `<ol>` lists).  
 e.g. 
-```
+```html
 <ol>
     <li value="100">Shankar</li>
     <li>Narapichas</li>
@@ -86,7 +86,7 @@ A row is divided into data cells with this tag.
 4. `<th>`  
 A row can be divided into headings with this tag.  
 e.g. 
-``` 
+```html
 <table>
 <tr>
     <th> FirstName </th>
@@ -147,26 +147,36 @@ The `<body>` tag has following attribute:
 
 1. **bgcolor**  
 It sets a color for the background of the page.  
-eg: `<body bgcolor = "green">...</body>`
-
+eg: 
+```html
+<body bgcolor = "green">...</body>
+```
 2. **text**  
 It sets a color for the body text.  
-eg: `<body text = "blue" bgcolor = "green">...</body>`
-
+eg: 
+```html
+<body text = "blue" bgcolor = "green">...</body>
+```
 3. **alink**  
 It sets a color for active links or selected links.  
-eg: `<body alink = "blue">...</body>`
-
+eg: 
+```html
+<body alink = "blue">...</body>
+```
 4. **link**  
 It sets a color for linked text.  
-eg: `<body link = "blue" >...</body>`
-
+eg: 
+```html
+<body link = "blue" >...</body>
+```
 5. **vlink**  
 It sets a color for visited links − that is, for linked text that you have already clicked on.  
-eg: `<body vlink = "blue" >...</body>`
-
-## 5. Write HTML code to display a login form. [2071]
+eg: 
+```html
+<body vlink = "blue" >...</body>
 ```
+## 5. Write HTML code to display a login form. [2071]
+```html
 <form>
     <h3>Login</h3>
     <label for =”username”>Username</label>
@@ -180,7 +190,7 @@ eg: `<body vlink = "blue" >...</body>`
 ```  
 
 ## 6. Write HTML code to display a registration form.
-```
+```html
 <form>
     <h3> Registration </h3>
     <label for=”firstname”>Firstname</label>
@@ -205,7 +215,7 @@ eg: `<body vlink = "blue" >...</body>`
 </form>
 ```
 ## 7. Write an HTML code to display the following. [2071]
-```
+```html
 <!--styling within head-->
 <style>
 table,td {
@@ -226,7 +236,7 @@ table,td {
 </table>
 
 
-```
+```html
 <!--styling within head-->
 <style>
 table,td {
