@@ -1,0 +1,58 @@
+<!DOCTYPE htm>
+<html>
+    <head>
+        <meta charset = utf-8>
+        <title>Login Page</title>
+        <style>
+            #form {
+                background:silver;
+                border:1px solid black;
+                padding:14px;
+                margin:5px;
+                width:192px; 
+                border-radius:2px;       
+            }
+            .form{
+                margin:10px;
+            }
+            #img{
+                height:35px;
+                width:35px;
+                text-align:center;
+            }
+            #centerAlign{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+    <form id="form">
+        
+        <div id="centerAlign"><h3>Login Page</h3><img src="img/ninja.png" alt="ninja" id="img"></div>
+        
+        <div class="form">
+            <label for="name">Name</label> <!-- for ="element_id"-->
+            <input type="text" id="name"/>  
+        </div>
+        <div class="form">
+            <label for="password"> Password</label>
+            <input type="password" id="password"/>
+        </div>
+        
+        <div class="form">
+            <input type="radio" name="gender" id="male">male  <!--name="gender", to check a single button out of same category-->
+            <input type="radio" name="gender" id="female">female
+        </div>
+        <div class="form">
+            <ul>Skills
+            <li><input type="checkbox" name="skills"> Python </li>
+            <li><input type="checkbox" name="skills"> JavaScript </li>
+            <li><input type="checkbox" name="skills"> Java </li>
+            </ul>
+        </div>
+        <div class="form"> 
+                <input type="submit" id="submit"> <!--submit button-->
+        </div>
+    </form>
+    </body>
+</html>
