@@ -1,0 +1,19 @@
+*{
+    padding:0px;
+    margin:0px;
+    font-size:1em; 
+}
+.Menu {
+    background:darkred;
+}
+
+.Menu a{
+    padding:10px;
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+}
+.Menu a:hover{
+    background:red;
+    font-weight: bold;
+}

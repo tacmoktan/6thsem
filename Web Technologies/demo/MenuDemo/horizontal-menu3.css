@@ -1,0 +1,23 @@
+* {
+    padding:0px;
+    margin:0px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:1em;
+}
+.menu{
+    display:flex;
+    background:darkblue;
+}
+.menu a{
+    text-decoration: none;
+    color:white;
+    padding:10px;
+    /* display:inline-block; */
+}
+.menu a:hover{
+    background:blue;
+}
+.right {
+    flex-grow:1;
+    text-align:right; 
+} 
