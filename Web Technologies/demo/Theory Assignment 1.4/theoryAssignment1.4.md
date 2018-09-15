@@ -312,7 +312,7 @@ document.cookie = "username=John Cena";
 ```
 
 ## 10) Make a simple website that takes information about a user. Use client-side script to validate user input. [Model Question]
-
+* same as 12
 ## 11) Use client-side script to validate the user input during login process. [2071]
 * HTML
 ```html
@@ -381,6 +381,7 @@ let loginResult = document.getElementById('loginResult');
 }
 ```
 ## 12) Use client side script to validate the user input during registration. [2071]
+* HTML
 ```html
   <!DOCTYPE html>
 <html>
@@ -429,6 +430,7 @@ let loginResult = document.getElementById('loginResult');
 </body>
 </html>
 ```
+* CSS
 ```css
 * {
     margin:0;
@@ -452,15 +454,14 @@ let loginResult = document.getElementById('loginResult');
     cursor:pointer;
 }
 ```
+* JS 
 ```js
 let btn = document.querySelector('#btn');
 btn.onclick = function validation(e) {
-    e.preventDefault(); //to prevent refreshing page
+    e.preventDefault()
     //selecting elements
     console.log('clicked');
     let name = document.querySelector('#nameTextBox').value;
-    console.log(name);
-    console.log(isNaN(name));
     let email = document.querySelector('#emailTextBox').value;
     let password = document.querySelector('#pwTextBox').value;
     let maleRadio = document.querySelector('#male');
@@ -468,10 +469,13 @@ btn.onclick = function validation(e) {
 
     //selecting spans to display errors or result
     let nameError = document.querySelector('#nameError');
-    console.log(nameError.value);
+    //console.log(nameError.value);
     let emailError = document.querySelector('#emailError');
     let passwordError = document.querySelector('#passwordError');
+    let genderError = document.querySelector('#genderError');
     let registerResult = document.getElementById('registerResult');
+    registerResult.innerHTML = ""; //initializing the HTML content as empty, everytime the button is clicked
+    registerResult.removeAttribute('class'); //initializing by removing class, everytime the button is clicked
     
     //error Alert
     //name error
@@ -485,32 +489,38 @@ btn.onclick = function validation(e) {
         nameError.textContent = ""; //to clear the error msg after being displayed
         
     //email error
-    if(email==="")
+    let emailReg = /^[^\s]+@gmail.com+$/; //\s matches all kinds of whitespaces, [^\s@] is negation of \s i.e. it matches everything except whitespaces //@gmail.com is a string included within the regex
+    //console.log(emailReg);
+    if(!emailReg.test(email)){
+        emailError.innerHTML = "invalid email";
+        //console.log(emailReg);
+    }
+    else if(email==="")
         emailError.innerHTML = "email cannot be empty";
     else
         emailError.innerHTML = ""; //to clear error msg
-    //password
+    //password error
     if(password==="")
         passwordError.innerHTML = "password cannot be empty";
     else
         passwordError.innerHTML = "";    //to clear error msg
     
-    //radio
-    
+    //radio error
+    if(maleRadio.checked === false && femaileRadio.checked === false )
+        genderError.innerHTML = "gender cannot be empty";
+
     //register
-    if(nameError.textContent==="" && emailError.textContent==="" && passwordError.textContent==="")
+    if(nameError.textContent==="" && emailError.textContent==="" && passwordError.textContent==="" && genderError.textContent ==="")
     {
         registerResult.classList.add("success");
         registerResult.innerHTML = "registration successful";
     }else{
         registerResult.classList.add("error");
-        registerResult.innerHTML = "register failed";
+        registerResult.innerHTML = "registration failed";
     }
         
 }
-}
 ```
-
 
 ## 13) What are two traditional ways of assigning event handlers in DOM? Explain. [2073]
 * Event handling has been part of JavaScript since the language's inception. The DOM of modern web browsers such as IE5+, NS6+, and Firefox provide expanded methods and flexibility (relative to older browsers) for capturing events.  
@@ -522,3 +532,47 @@ Example:
 You can also assign and set up event handlers to elements using scripting, and inside your script . This allows for the event handlers to be dynamically set up, without having to mess around with the HTML codes on the page. When setting up event handlers for an element directly inside your script, the code to execute for the events must be defined inside a function.  
 
 ## 14) Explain about the process of changing an HTML element with the help of DOM. [2073]
+* The HTML DOM allows JavaScript to change the content of HTML elements. Changing HTML Output Stream JavaScript can create dynamic HTML content: *Date: Mon Sep 10 2018 19:40:23 GMT+0545* (Nepal Time).  
+In JavaScript, `document.write()` can be used to write directly to the HTML output stream
+
+Example:
+```html
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+document.write(Date());
+</script>
+</body>
+</html>
+Changing HTML Content
+The easiest way to modify the content of an HTML element is by using the innerHTML property.
+Syntax:
+document.getElementById(id).innerHTML = new HTML
+Example:
+<html>
+<body>
+<p id="p1">HelloWorld!</p>
+<script>
+document.getElementById("p1").innerHTML = "Newtext!";
+</script>
+</body>
+</html>
+```
+* Changing the Value of an Attribute `getElementByID.attribute()` is used in Javascript to change the value of an attribute of an HTML element.  
+Syntax: `document.getElementById(id).attribute = new value`  
+Example:
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="myImage" src="smiley.gif">
+
+<script>
+document.getElementById("myImage").src = "landscape.jpg";
+</script>
+
+</body>
+</html>
+```
