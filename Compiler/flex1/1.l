@@ -1,0 +1,4 @@
+%%
+"hey"   printf("shankar huu");
+. ;
+%%
